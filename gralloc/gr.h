@@ -32,6 +32,9 @@
 struct private_module_t;
 struct private_handle_t;
 
+#ifndef PAGE_SIZE
+#define PAGE_SIZE 4096
+#endif
 inline size_t roundUpToPageSize(size_t x) {
     return (x + (PAGE_SIZE-1)) & ~(PAGE_SIZE-1);
 }
